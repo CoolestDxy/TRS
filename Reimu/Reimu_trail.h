@@ -44,9 +44,7 @@ void trail_stop(const int t, int &x, int &y)
 	y = 0;
 }
 //追踪弹幕轨迹
-void trail_follow(const int i, int &x, int &y)
+void trail_follow(const int t, int &x, int &y)		//Tips:追踪弹幕请在初始化时角度全部设为0；
 {
-	//TODO..
-	x = 0;
-	y = 0;
+	Location
 }

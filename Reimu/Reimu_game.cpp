@@ -35,6 +35,7 @@ int main()
 		g[i].initialization(320, 120, 5, i / 20.0 * 2 * Pi, trail_circle_2, RED);
 		h[i].initialization(320, 120, 5, i / 20.0 * 2 * Pi, trail_circle_3, WHITE);
 	}
+	Bullet follow(100, 100, 10, 0, trail_follow, WHITE);
 	while (alive)	//存活判定
 	{
 		//开始批量绘图
@@ -44,14 +45,15 @@ int main()
 		//刷新弹幕
 		for (int i = 0; i < 20; i++)
 		{
-			a[i].fresh();
-			b[i].fresh();
-			c[i].fresh();
-			d[i].fresh();
-			e[i].fresh();
-			f[i].fresh();
-			g[i].fresh();
-			h[i].fresh();
+			follow.fresh();
+			//a[i].fresh();
+			//b[i].fresh();
+			//c[i].fresh();
+			//d[i].fresh();
+			//e[i].fresh();
+			//f[i].fresh();
+			//g[i].fresh();
+			//h[i].fresh();
 		}
 		//结束绘图释放缓冲
 		FlushBatchDraw();

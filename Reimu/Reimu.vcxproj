@@ -157,9 +157,6 @@
     <ClInclude Include="Reimu_time.h" />
     <ClInclude Include="Reimu_trail.h" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Reimu.filters" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

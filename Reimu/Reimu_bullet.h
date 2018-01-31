@@ -97,5 +97,8 @@ public:
 			time.start();
 		}
 	}
-
+	Location locate()	//返回子弹坐标
+	{
+		return{ nowx,nowy };
+	}
 };

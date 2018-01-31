@@ -3,6 +3,11 @@
 #include<graphics.h>
 #endif // !GRAPHICS_H
 
+struct Location
+{
+	int x;
+	int y;
+};	//定义位置坐标
 
 class Self
 {
@@ -58,4 +63,5 @@ public:
 	{
 		return(y + h / 2);
 	}
+	Location
 };
