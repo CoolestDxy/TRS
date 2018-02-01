@@ -153,8 +153,9 @@
     <ClCompile Include="Reimu_self.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ReimuHeadFile.h" />
     <ClInclude Include="Reimu_bullet.h" />
-    <ClInclude Include="Reimu_time.h" />
+    <ClInclude Include="ReimuTime.cpp" />
     <ClInclude Include="Reimu_trail.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

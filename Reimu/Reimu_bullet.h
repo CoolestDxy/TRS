@@ -5,12 +5,19 @@
 class Bullet
 {
 private:
+	Location locate;	//初始位置
+	Location nowLocate;	//坐标位置
+	Location deltaLocate;	//距离差
+
+	//待替换，不再推荐使用
 	int x;			//初始位置:X
 	int y;			//初始位置:y
 	int nowx = 0;	//坐标位置:x'
 	int nowy = 0;	//坐标位置:y'
 	int delta_x;	//弹幕自机距离差:x
 	int delta_y;	//弹幕自机距离差:y
+	//待替换，不再推荐使用
+
 	int r;			//弹幕半径
 	double angle;	//绘制角度
 	void(*trail)(int, int&, int&);//路径样式
@@ -97,7 +104,7 @@ public:
 			time.start();
 		}
 	}
-	Location locate()	//返回子弹坐标
+	Location bulletLocate()	//返回子弹坐标
 	{
 		return{ nowx,nowy };
 	}

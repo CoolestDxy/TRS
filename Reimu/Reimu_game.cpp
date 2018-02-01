@@ -1,12 +1,7 @@
 //MoWu_game.cpp
 #include"Reimu_datasheet.h"
-#ifndef GRAPHICS_H
-#include<graphics.h>
-#endif // !GRAPHICS_H
-#ifndef CONIO_H
-#include<conio.h>
-#endif // !CONIO_H
-#include"Reimu_time.h"
+#include"ReimuHeadFile.h"
+//#include"Reimu_time.h"
 #include"Reimu_self.h"
 Self self;
 bool alive{ true };
@@ -46,14 +41,14 @@ int main()
 		for (int i = 0; i < 20; i++)
 		{
 			follow.fresh();
-			//a[i].fresh();
-			//b[i].fresh();
-			//c[i].fresh();
-			//d[i].fresh();
-			//e[i].fresh();
-			//f[i].fresh();
-			//g[i].fresh();
-			//h[i].fresh();
+			a[i].fresh();
+			b[i].fresh();
+			c[i].fresh();
+			d[i].fresh();
+			e[i].fresh();
+			f[i].fresh();
+			g[i].fresh();
+			h[i].fresh();
 		}
 		//结束绘图释放缓冲
 		FlushBatchDraw();

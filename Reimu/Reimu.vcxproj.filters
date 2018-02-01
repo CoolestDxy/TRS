@@ -29,11 +29,14 @@
     <ClInclude Include="Reimu_trail.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Reimu_time.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Reimu_bullet.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ReimuHeadFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ReimuTime.cpp">
+      <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
