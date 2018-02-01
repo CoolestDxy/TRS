@@ -150,13 +150,12 @@
     <ClCompile Include="Reimu_game.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Reimu_self.h" />
+    <ClCompile Include="ReimuSelf.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ReimuHeadFile.h" />
-    <ClInclude Include="Reimu_bullet.h" />
+    <ClInclude Include="ReimuBullet.cpp" />
     <ClInclude Include="ReimuTime.cpp" />
-    <ClInclude Include="Reimu_trail.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,13 +1,7 @@
 //MoWu_game.cpp
 #include"Reimu_datasheet.h"
 #include"ReimuHeadFile.h"
-//#include"Reimu_time.h"
-#include"Reimu_self.h"
-Self self;
-bool alive{ true };
-#include"Reimu_trail.h"
-#include"Reimu_bullet.h"
-
+SysTime sysGlobalTime;//宏观时间（游戏计时）
 
 int main()
 {
@@ -31,7 +25,7 @@ int main()
 		h[i].initialization(320, 120, 5, i / 20.0 * 2 * Pi, trail_circle_3, WHITE);
 	}
 	Bullet follow(100, 100, 10, 0, trail_follow, WHITE);
-	while (alive)	//存活判定
+	while (1)	//存活判定
 	{
 		//开始批量绘图
 		BeginBatchDraw();
