@@ -39,4 +39,6 @@ void trail_stop(const int t, int &x, int &y)
 void trail_follow(const int t, int &x, int &y)		//Tips:追踪弹幕请在初始化时角度全部设为0；
 {
 	Location selflocation = self.pointLocate();
+	x = 0;
+	y = t / 10;
 }

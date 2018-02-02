@@ -53,6 +53,28 @@ public:
 
 extern Self self;
 
+
+//弹幕轨迹函数
+
+//直线轨迹
+void trail_line(const int t, int& x, int& y);
+//蛇形轨迹
+void trail_sin(const int t, int& x, int& y);
+//圆形轨迹(逆时针)
+void trail_circle_0(const int t, int &x, int &y);
+//圆形轨迹(顺时针)
+void trail_circle_1(const int t, int &x, int &y);
+//圆形巡回轨迹(逆时针)
+void trail_circle_2(const int t, int &x, int &y);
+//圆形巡回轨迹(顺时针)
+void trail_circle_3(const int t, int &x, int &y);
+//静止弹幕（测试用）
+void trail_stop(const int t, int &x, int &y);
+//追踪弹幕轨迹
+void trail_follow(const int t, int &x, int &y);		//Tips:追踪弹幕请在初始化时角度全部设为0；
+
+
+
 //弹幕
 
 class Bullet
@@ -77,16 +99,14 @@ private:
 	SysTime time;	//时间
 	int color;		//颜色
 public:
-	Bullet	//默认值
-	(
-		const int x_,
-		const int y_,
-		const int r_,
-		const double angle_,
-		void(*trail_)(int, int&, int&),
-		int color_
+	Bullet(			//默认值
+		const int x_ = 100,
+		const int y_ = 100,
+		const int r_ = 5,
+		const double angle_ = 0,
+		void(*trail_)(int, int&, int&) = trail_line,
+		int color_ = WHITE
 	);
-
 
 	//初始化弹幕
 	void initialization
@@ -102,23 +122,3 @@ public:
 	void fresh();
 	Location bulletLocate();	//返回子弹坐标
 };
-
-//弹幕轨迹函数
-
-//直线轨迹
-void trail_line(const int t, int& x, int& y);
-//蛇形轨迹
-void trail_sin(const int t, int& x, int& y);
-//圆形轨迹(逆时针)
-void trail_circle_0(const int t, int &x, int &y);
-//圆形轨迹(顺时针)
-void trail_circle_1(const int t, int &x, int &y);
-//圆形巡回轨迹(逆时针)
-void trail_circle_2(const int t, int &x, int &y);
-//圆形巡回轨迹(顺时针)
-void trail_circle_3(const int t, int &x, int &y);
-//静止弹幕（测试用）
-void trail_stop(const int t, int &x, int &y);
-//追踪弹幕轨迹
-void trail_follow(const int t, int &x, int &y);		//Tips:追踪弹幕请在初始化时角度全部设为0；
-
