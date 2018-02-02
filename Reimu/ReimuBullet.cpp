@@ -53,7 +53,7 @@ void Bullet::fresh()
 		)
 	{
 		//碰撞判定
-		alive = false;
+		self.leastPlayer--;
 	}
 	//恢复为7秒前的状态（for demo）
 	if (time.now() > 7000)

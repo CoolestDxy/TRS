@@ -24,6 +24,9 @@
     <ClCompile Include="ReimuSelf.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ReimuTrail.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ReimuHeadFile.h">

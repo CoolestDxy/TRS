@@ -1,7 +1,6 @@
 # pragma once
 //Mowu_datasheet.h
 //参数设定文件
-#include<cmath>
 
 //屏幕高度
 const int  SCREEN_LENGTH = 480;
