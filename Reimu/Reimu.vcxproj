@@ -157,8 +157,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ReimuHeadFile.h" />
-    <ClInclude Include="ReimuBullet.cpp" />
-    <ClInclude Include="ReimuTime.cpp" />
+    <ClCompile Include="ReimuBullet.cpp" />
+    <ClCompile Include="ReimuTime.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

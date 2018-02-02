@@ -41,15 +41,67 @@ public:
 	Self();
 	void Draw();	//绘制
 	void Moveself();	//自身移动
+
 	int ValueofX();	//不建议启用，请使用locate函数
 	int ValueofY();	//不建议启用，请使用locate函数
 	int SelfpointX();	//不建议启用，请使用pointLocate函数
 	int SelfpointY();	//不建议启用，请使用pointLocate函数
+
 	Location locate();	//返回图像坐标
 	Location pointLocate();	//返回判定点坐标
 };
 
 extern Self self;
+
+//弹幕
+
+class Bullet
+{
+private:
+	Location locate;	//初始位置
+	Location nowLocate;	//坐标位置
+	Location deltaLocate;	//距离差
+
+	//待替换，不再推荐使用
+	int x;			//初始位置:X
+	int y;			//初始位置:y
+	int nowx = 0;	//坐标位置:x'
+	int nowy = 0;	//坐标位置:y'
+	int delta_x;	//弹幕自机距离差:x
+	int delta_y;	//弹幕自机距离差:y
+					//待替换，不再推荐使用
+
+	int r;			//弹幕半径
+	double angle;	//绘制角度
+	void(*trail)(int, int&, int&);//路径样式
+	SysTime time;	//时间
+	int color;		//颜色
+public:
+	Bullet	//默认值
+	(
+		const int x_,
+		const int y_,
+		const int r_,
+		const double angle_,
+		void(*trail_)(int, int&, int&),
+		int color_
+	);
+
+
+	//初始化弹幕
+	void initialization
+	(
+		const int x_,
+		const int y_,
+		const int r_,
+		const double angle_,
+		void(*trail_)(int, int&, int&),
+		int color_
+	);
+	//刷新弹幕&碰撞判定
+	void fresh();
+	Location bulletLocate();	//返回子弹坐标
+};
 
 //弹幕轨迹函数
 
@@ -70,50 +122,3 @@ void trail_stop(const int t, int &x, int &y);
 //追踪弹幕轨迹
 void trail_follow(const int t, int &x, int &y);		//Tips:追踪弹幕请在初始化时角度全部设为0；
 
-//弹幕
-class Bullet
-{
-private:
-	Location locate;	//初始位置
-	Location nowLocate;	//坐标位置
-	Location deltaLocate;	//距离差
-
-							//待替换，不再推荐使用
-	int x;			//初始位置:X
-	int y;			//初始位置:y
-	int nowx = 0;	//坐标位置:x'
-	int nowy = 0;	//坐标位置:y'
-	int delta_x;	//弹幕自机距离差:x
-	int delta_y;	//弹幕自机距离差:y
-					//待替换，不再推荐使用
-
-	int r;			//弹幕半径
-	double angle;	//绘制角度
-	void(*trail)(int, int&, int&);//路径样式
-	SysTime time;	//时间
-	int color;		//颜色
-public:
-	Bullet	//默认值
-	(
-		const int x_ ,
-		const int y_,
-		const int r_,
-		const double angle_,
-		void(*trail_)(int, int&, int&),
-		int color_
-	);
-
-	//初始化弹幕
-	void initialization
-	(
-		const int x_ = 0,
-		const int y_ = 0,
-		const int r_ = 10,
-		const double angle_ = 0,
-		void(*trail_)(int, int&, int&) = trail_line,
-		int color_ = WHITE
-	);
-	//刷新弹幕&碰撞判定
-	void fresh();
-	Location bulletLocate();	//返回子弹坐标
-};

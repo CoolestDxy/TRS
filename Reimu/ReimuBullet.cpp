@@ -2,14 +2,13 @@
 #include"ReimuHeadFile.h"
 #include"Reimu_datasheet.h"
 
-Bullet::Bullet
-(
-	const int x_ = 0,
-	const int y_ = 0,
-	const int r_ = 10,
-	const double angle_ = 0,
-	void(*trail_)(int, int&, int&) = trail_line,
-	int color_ = WHITE
+Bullet::Bullet(
+	const int x_,
+	const int y_,
+	const int r_,
+	const double angle_,
+	void(*trail_)(int, int&, int&),
+	int color_
 )
 {
 	//赋值
@@ -21,6 +20,7 @@ Bullet::Bullet
 	color = color_;
 	time.start();
 }
+
 void Bullet::fresh()
 {
 	//擦除原图形
@@ -80,6 +80,7 @@ void Bullet::initialization
 	color = color_;
 	time.start();
 }
+
 Location Bullet::bulletLocate()
 {
 	return{ nowx,nowy };

@@ -1,7 +1,9 @@
 //MoWu_game.cpp
 #include"Reimu_datasheet.h"
 #include"ReimuHeadFile.h"
+
 //SysTime sysGlobalTime;//宏观时间（游戏计时）
+
 Self self;
 
 int main()
@@ -26,12 +28,13 @@ int main()
 	//	h[i].initialization(320, 120, 5, i / 20.0 * 2 * Pi, trail_circle_3, WHITE);
 	//}
 	Bullet follow(100, 100, 10, 0, trail_follow, WHITE);
+	follow.initialization(100, 100, 10, 0, trail_circle_0, WHITE);
 	while (1)	//存活判定
 	{
 		//开始批量绘图
 		BeginBatchDraw();
 		//自机移动
-		//self.Moveself();
+		self.Moveself();
 		//刷新弹幕
 		//for (int i = 0; i < 20; i++)
 		//{
