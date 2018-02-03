@@ -22,10 +22,10 @@ Bullet::Bullet
 
 void Bullet::fresh()
 {
-	//擦除原图形
-	setlinecolor(BLACK);
-	setfillcolor(BLACK);
-	fillcircle(locate.x, locate.y, r);
+	////擦除原图形
+	//setlinecolor(BLACK);
+	//setfillcolor(BLACK);
+	//fillcircle(locate.x, locate.y, r);
 	//计算自然坐标
 	Location temp;
 	trail(time.now(), temp,self.pointLocate());

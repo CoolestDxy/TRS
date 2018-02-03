@@ -9,32 +9,17 @@ Self::Self()
 	loadimage(&selfimage[1], _T(".\\Reimu\\stop.jpg"));
 	pictureSize = { selfimage[1].getwidth(),selfimage[1].getheight() };	//获取图像尺寸
 	location = { SCREEN_WIDTH / 2 , SCREEN_LENGTH * 4 / 5 };
-
-	//即将弃用
-	//w = selfimage[1].getwidth();
-	//h = selfimage[1].getheight();
 }
-//void Self::set()
-//{
-//	////setfillcolor(WHITE);	即将弃用
-//	//putimage(SCREEN_WIDTH / 2, SCREEN_LENGTH * 1 / 10, &selfimage[1]);
-//	//location = { SCREEN_WIDTH / 2, SCREEN_LENGTH * 2 / 10 };
-//
-//	//x = SCREEN_WIDTH / 2;
-//	//y = SCREEN_LENGTH * 4 / 5;
-//	//speed = 5;
-//	//即将弃用
-//}
 void Self::Moveself()
 {
 	//擦除
-	setlinecolor(BLACK);
-	setfillcolor(BLACK);
-	fillrectangle
-	(
-		location.x, location.y, 
-		(location.x + pictureSize.x), (location.y + pictureSize.y)
-	);
+	//setlinecolor(BLACK);
+	//setfillcolor(BLACK);
+	//fillrectangle
+	//(
+	//	location.x, location.y, 
+	//	(location.x + pictureSize.x), (location.y + pictureSize.y)
+	//);
 	State = selfimage[1];
 	//低速判断
 	if (GetAsyncKeyState(VK_SHIFT) & 0x8000)

@@ -5,9 +5,12 @@
 //SysTime sysGlobalTime;//宏观时间（游戏计时）
 
 Self self;
+IMAGE backGround;
 
 int main()
 {
+	//背景初始化
+	backGroundInitialize();
 	initgraph(SCREEN_WIDTH, SCREEN_LENGTH);	//初始化UI界面
 	//self.set();								//自机就位
 	//demo弹幕演示示例
@@ -33,6 +36,8 @@ int main()
 	{
 		//开始批量绘图
 		BeginBatchDraw();
+		//背景绘制
+		backGroundDraw();
 		//自机移动
 		self.Moveself();
 		//刷新弹幕

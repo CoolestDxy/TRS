@@ -29,6 +29,10 @@ struct Location
 	int y;
 };
 
+//±³¾°
+void backGroundInitialize();
+void backGroundDraw();
+
 //×Ô»ú
 class Self
 {
