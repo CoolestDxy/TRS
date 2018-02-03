@@ -14,3 +14,7 @@ const int SAFE_DISTANCE = 50;
 const int HIGH_SPEED = 10;
 //低速速度
 const int LOW_SPEED = 5;
+//弹幕基准除速率
+const int BULLET_BASE_SPEED = 10;
+//三角基准除量
+const double ANGLE_BASE_DIVISOR = 1000.0;

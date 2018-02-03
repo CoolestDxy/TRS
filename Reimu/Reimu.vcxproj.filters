@@ -15,12 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Reimu_game.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Reimu_datasheet.h">
-      <Filter>头文件</Filter>
-    </ClCompile>
     <ClCompile Include="ReimuSelf.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -32,6 +26,12 @@
     </ClCompile>
     <ClCompile Include="ReimuTime.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ReimuGame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ReimuDatasheet.h">
+      <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

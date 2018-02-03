@@ -1,19 +1,18 @@
 //ReimuBullet.cpp
 #include"ReimuHeadFile.h"
-#include"Reimu_datasheet.h"
+#include"ReimuDatasheet.h"
 
-Bullet::Bullet(
-	const int x_,
-	const int y_,
+Bullet::Bullet
+(
+	const Location b_,
 	const int r_,
 	const double angle_,
-	void(*trail_)(int, int&, int&),
+	void(*trail_)(int, Location&, Location&),
 	int color_
 )
 {
 	//赋值
-	x = x_;
-	y = y_;
+	initialLocate = b_;
 	r = r_;
 	angle = angle_;
 	trail = trail_;
@@ -26,30 +25,40 @@ void Bullet::fresh()
 	//擦除原图形
 	setlinecolor(BLACK);
 	setfillcolor(BLACK);
-	fillcircle(nowx, nowy, r);
+	fillcircle(locate.x, locate.y, r);
 	//计算自然坐标
-	int a, b;
-	trail(time.now(), a, b);
+	Location temp;
+	trail(time.now(), temp,self.pointLocate());
 	//转化为全局坐标
-	nowx = x + a * cos(angle) - b * sin(angle);
-	nowy = y + a * sin(angle) + b * cos(angle);
+	locate = 
+	{ 
+		static_cast<int>(initialLocate.x + temp.x*cos(angle) - temp.y*sin(angle)),
+		static_cast<int>(initialLocate.y + temp.x*sin(angle) + temp.y*cos(angle))
+	};
+	//nowx = x + a * cos(angle) - b * sin(angle);
+	//nowy = y + a * sin(angle) + b * cos(angle);
 	//绘制弹幕
 	setlinecolor(WHITE);
 	setfillcolor(color);
-	fillcircle(nowx, nowy, r);
+	fillcircle(locate.x, locate.y, r);
 	setfillcolor(WHITE);
 	//自机判定
 	//计算全局坐标位置插值
-	delta_x = nowx - self.SelfpointX();
-	delta_y = nowy - self.SelfpointY();
+	deltaLocate = 
+	{
+		locate.x - self.pointLocate().x,
+		locate.y - self.pointLocate().y
+	};
+	//delta_x = nowx - self.SelfpointX();
+	//delta_y = nowy - self.SelfpointY();
 	if (
 		//短路计算快速过滤明显不会碰撞的弹幕
-		delta_x < SAFE_DISTANCE&&
-		delta_x > -1 * SAFE_DISTANCE&&
-		delta_y < SAFE_DISTANCE&&
-		delta_y > -1 * SAFE_DISTANCE&&
+		deltaLocate.x < SAFE_DISTANCE&&
+		deltaLocate.x > -1 * SAFE_DISTANCE&&
+		deltaLocate.y < SAFE_DISTANCE&&
+		deltaLocate.y > -1 * SAFE_DISTANCE&&
 		//临近弹幕计算距离判定
-		delta_x*delta_x + delta_y * delta_y <= r * r
+		deltaLocate.x*deltaLocate.x + deltaLocate.y * deltaLocate.y <= r * r
 		)
 	{
 		//碰撞判定
@@ -64,24 +73,17 @@ void Bullet::fresh()
 
 void Bullet::initialization
 (
-	const int x_ = 0,
-	const int y_ = 0,
-	const int r_ = 10,
-	const double angle_ = 0,
-	void(*trail_)(int, int&, int&) = trail_line,
-	int color_ = WHITE
+	const Location b_,
+	const int r_,
+	const double angle_,
+	void(*trail_)(int, Location&, Location&),
+	int color_
 )
 {
-	x = x_;
-	y = y_;
+	initialLocate = b_;
 	r = r_;
 	angle = angle_;
 	trail = trail_;
 	color = color_;
 	time.start();
-}
-
-Location Bullet::bulletLocate()
-{
-	return{ nowx,nowy };
 }
