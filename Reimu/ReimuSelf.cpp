@@ -1,4 +1,6 @@
 //ReimuSelf.cpp
+//定义自机相关的函数
+
 #include"ReimuHeadFile.h"
 #include"ReimuDatasheet.h"
 
@@ -12,14 +14,6 @@ Self::Self()
 }
 void Self::Moveself()
 {
-	//擦除
-	//setlinecolor(BLACK);
-	//setfillcolor(BLACK);
-	//fillrectangle
-	//(
-	//	location.x, location.y, 
-	//	(location.x + pictureSize.x), (location.y + pictureSize.y)
-	//);
 	State = selfimage[1];
 	//低速判断
 	if (GetAsyncKeyState(VK_SHIFT) & 0x8000)
@@ -75,25 +69,3 @@ Location Self::pointLocate()
 {
 	return { (location.x + pictureSize.x / 2),(location.y + pictureSize.y / 2) };
 }
-
-
-//Location Self::locate()
-//{
-//	return { x,y };
-//}
-//int Self::ValueofX()
-//{
-//	return x;
-//}
-//int Self::ValueofY()
-//{
-//	return y;
-//}
-//int Self::SelfpointX()
-//{
-//	return (x + w / 2);
-//}
-//int Self::SelfpointY()
-//{
-//	return (y + h / 2);
-//}

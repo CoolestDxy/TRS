@@ -1,5 +1,6 @@
 //ReimuTime.cpp
 //定义时间相关的函数
+
 #include"ReimuHeadFile.h"
 
 //开始计时

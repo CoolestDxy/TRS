@@ -1,4 +1,6 @@
 //ReimuBullet.cpp
+//定义弹幕相关的函数
+
 #include"ReimuHeadFile.h"
 #include"ReimuDatasheet.h"
 
@@ -22,10 +24,6 @@ Bullet::Bullet
 
 void Bullet::fresh()
 {
-	////擦除原图形
-	//setlinecolor(BLACK);
-	//setfillcolor(BLACK);
-	//fillcircle(locate.x, locate.y, r);
 	//计算自然坐标
 	Location temp;
 	trail(time.now(), temp,self.pointLocate());
@@ -35,8 +33,6 @@ void Bullet::fresh()
 		static_cast<int>(initialLocate.x + temp.x*cos(angle) - temp.y*sin(angle)),
 		static_cast<int>(initialLocate.y + temp.x*sin(angle) + temp.y*cos(angle))
 	};
-	//nowx = x + a * cos(angle) - b * sin(angle);
-	//nowy = y + a * sin(angle) + b * cos(angle);
 	//绘制弹幕
 	setlinecolor(WHITE);
 	setfillcolor(color);
@@ -49,8 +45,6 @@ void Bullet::fresh()
 		locate.x - self.pointLocate().x,
 		locate.y - self.pointLocate().y
 	};
-	//delta_x = nowx - self.SelfpointX();
-	//delta_y = nowy - self.SelfpointY();
 	if (
 		//短路计算快速过滤明显不会碰撞的弹幕
 		deltaLocate.x < SAFE_DISTANCE&&

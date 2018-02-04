@@ -1,8 +1,7 @@
-//ReimuG ame.cpp
+//ReimuGame.cpp
+
 #include"ReimuDatasheet.h"
 #include"ReimuHeadFile.h"
-
-//SysTime sysGlobalTime;//宏观时间（游戏计时）
 
 Self self;
 IMAGE backGround;
@@ -12,7 +11,6 @@ int main()
 	//背景初始化
 	backGroundInitialize();
 	initgraph(SCREEN_WIDTH, SCREEN_LENGTH);	//初始化UI界面
-	//self.set();								//自机就位
 	//demo弹幕演示示例
 	Bullet a0({ 320, 240 }, 5, 0, trail_sin, WHITE);
 	Bullet a1({ 320, 240 }, 5, Pi / 2, trail_sin, WHITE);

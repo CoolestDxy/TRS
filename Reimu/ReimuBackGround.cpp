@@ -1,8 +1,9 @@
 //ReimuBackGround.cpp
+//定义背景相关的函数
+
 #include"ReimuDatasheet.h"
 #include"ReimuHeadFile.h"
 
-char *a = ".\\backGround\\backGround.jpg";
 
 extern IMAGE backGround;
 
