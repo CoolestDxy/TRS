@@ -63,6 +63,9 @@ void Self::Moveself()
 	}
 
 	putimage(location.x, location.y, &State);
+	setlinecolor(WHITE);
+	setfillcolor(BLACK);
+	fillcircle(self.pointLocate().x, self.pointLocate().y, 2);
 	Sleep(10);
 }
 Location Self::pointLocate()
