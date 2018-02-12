@@ -2,6 +2,8 @@
 //Mowu_datasheet.h
 //参数设定文件
 
+//背景图地址
+#define BACKG_ROUND_IMAGINE ".\\backGround\\backGround.jpg"
 //屏幕高度
 const int  SCREEN_LENGTH = 480;
 //屏幕宽度

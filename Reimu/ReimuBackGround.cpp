@@ -9,7 +9,7 @@ extern IMAGE backGround;
 
 void backGroundInitialize()
 {
-	loadimage(&backGround, _T(".\\backGround\\backGround.jpg"));
+	loadimage(&backGround, _T(BACKG_ROUND_IMAGINE));
 }
 void backGroundDraw()
 {
