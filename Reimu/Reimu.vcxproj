@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ReimuBulletLink.cpp" />
     <ClCompile Include="ReimuBackGround.cpp" />
     <ClCompile Include="ReimuTrail.cpp" />
     <ClCompile Include="ReimuDatasheet.h" />
