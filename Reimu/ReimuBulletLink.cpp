@@ -1,3 +1,6 @@
 //ReimuBultLink.cpp
 //µ¯Ä»Á´ÊµÏÖ
-//TODO..
+
+#include"ReimuDatasheet.h"
+#include"ReimuHeadFile.h"
+

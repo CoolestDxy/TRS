@@ -1,20 +1,29 @@
 //ReimuGame.cpp
+//游戏客户端
 
 #include"ReimuDatasheet.h"
 #include"ReimuHeadFile.h"
 
+#include<iostream>
+
 Self self;
 IMAGE backGround;
+
 
 int main()
 {
 	//背景初始化
 	backGroundInitialize();
+	//生成弹幕链
+	BulletNode * headBulletNode;
+	headBulletNode = new BulletNode;
+
+
 	initgraph(SCREEN_WIDTH, SCREEN_LENGTH);	//初始化UI界面
 	//demo弹幕演示示例
-	Bullet a0({ 320, 240 }, 5, 0, trail_sin, WHITE);
-	Bullet a1({ 320, 240 }, 5, Pi / 2, trail_sin, WHITE);
-	Bullet a2({ 320, 240 }, 5, Pi, trail_sin, WHITE);
+	Bullet a0({ 320, 240 }, 5, 0, trail_sin, WHITE,0);
+	Bullet a1({ 320, 240 }, 5, Pi / 2, trail_sin, WHITE,0);
+	Bullet a2({ 320, 240 }, 5, Pi, trail_sin, WHITE,0);
 	Bullet a3({ 320, 240 }, 5, Pi * 1.5, trail_sin, WHITE);
 	Bullet a[21],b[21],c[21],d[21],e[21],f[21],g[21],h[21];
 	//重新初始化（上面的初始化废弃）

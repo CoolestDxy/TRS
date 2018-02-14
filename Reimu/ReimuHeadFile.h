@@ -66,6 +66,7 @@ private:
 	void(*trail)(int, Location&, Location&);//路径样式
 	SysTime time;	//时间
 	int color;		//颜色
+	clock_t startTime;	//生成时间
 public:
 	Location locate;	//坐标位置
 
@@ -74,7 +75,8 @@ public:
 		const int r_ = 5,
 		const double angle_ = 0,
 		void(*trail_)(int, Location&, Location&) = trail_stop,
-		int color_ = WHITE
+		int color_ = WHITE,
+		clock_t startTime_ = 0	//出现时间
 	);
 
 	//初始化弹幕
@@ -89,6 +91,16 @@ public:
 	//刷新弹幕&碰撞判定
 	void fresh();
 };
+
+//弹幕链系统
+class BulletNode
+{
+public:
+	Bullet * bullet;
+	struct BulletNode * prev;
+	struct BulletNode * next;
+};
+
 
 
 //弹幕轨迹函数

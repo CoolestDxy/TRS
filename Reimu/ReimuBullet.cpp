@@ -1,5 +1,5 @@
 //ReimuBullet.cpp
-//定义弹幕相关的函数
+//弹幕相关函数
 
 #include"ReimuHeadFile.h"
 #include"ReimuDatasheet.h"
@@ -10,7 +10,8 @@ Bullet::Bullet
 	const int r_,
 	const double angle_,
 	void(*trail_)(int, Location&, Location&),
-	int color_
+	int color_,
+	clock_t startTime_
 )
 {
 	//赋值
@@ -19,7 +20,7 @@ Bullet::Bullet
 	angle = angle_;
 	trail = trail_;
 	color = color_;
-	time.start();
+	startTime = startTime_;
 }
 
 void Bullet::fresh()

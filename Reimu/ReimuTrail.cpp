@@ -1,5 +1,5 @@
 //ReimuTrail.cpp
-//定义轨迹相关的函数
+//轨迹相关函数
 
 #include"ReimuDatasheet.h"
 #include"ReimuHeadFile.h"
