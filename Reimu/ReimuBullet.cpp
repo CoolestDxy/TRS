@@ -13,7 +13,7 @@ Bullet::Bullet
 	const double angle_,
 	void(*trail_)(int, Location&, Location&),
 	int color_,
-	clock_t startTime_
+	unsigned long startTime_
 )
 {
 	//赋值
@@ -27,11 +27,11 @@ Bullet::Bullet
 
 void Bullet::fresh()
 {
-	if (startTime >= sysTime.now())
+	if (startTime <= sysTime.now())
 	{
 		//计算自然坐标
 		Location temp;
-		trail(time.now(), temp, self.pointLocate());
+		trail(time.now()-startTime, temp, self.pointLocate());
 		//转化为全局坐标
 		locate =
 		{
@@ -77,7 +77,8 @@ void Bullet::initialization
 	const int r_,
 	const double angle_,
 	void(*trail_)(int, Location&, Location&),
-	int color_
+	int color_,
+	unsigned long startTime_
 )
 {
 	initialLocate = b_;
@@ -85,5 +86,5 @@ void Bullet::initialization
 	angle = angle_;
 	trail = trail_;
 	color = color_;
-	time.start();
+	startTime = startTime_;
 }

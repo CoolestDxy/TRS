@@ -66,7 +66,7 @@ private:
 	void(*trail)(int, Location&, Location&);//路径样式
 	SysTime time;	//时间
 	int color;		//颜色
-	clock_t startTime;	//生成时间
+	unsigned long startTime;	//生成时间
 public:
 	Location locate;	//坐标位置
 
@@ -76,7 +76,7 @@ public:
 		const double angle_ = 0,
 		void(*trail_)(int, Location&, Location&) = trail_stop,
 		int color_ = WHITE,
-		clock_t startTime_ = 0	//出现时间
+		unsigned long startTime_ = 0	//出现时间
 	);
 
 	//初始化弹幕
@@ -86,7 +86,8 @@ public:
 		const int r_ = 5,
 		const double angle_ = 0,
 		void(*trail_)(int, Location&, Location&) = trail_stop,
-		int color_ = WHITE
+		int color_ = WHITE,
+		unsigned long  startTime_ = 0
 		);
 	//刷新弹幕&碰撞判定
 	void fresh();
