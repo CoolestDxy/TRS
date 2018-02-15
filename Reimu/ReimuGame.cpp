@@ -8,6 +8,7 @@
 
 Self self;
 IMAGE backGround;
+SysTime sysTime;
 
 
 int main()
