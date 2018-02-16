@@ -108,6 +108,8 @@ void pushBullet(BulletNode * const headBulletNode, Bullet * const bullet);
 void popBullet(BulletNode *const headBulletNode, Bullet * const bullet);
 //Ë¢ÐÂ£¨»æÖÆ£©µ¯Ä»Á´
 void freshBulletLink(BulletNode *const headBulletNode);
+//Çå¿Õµ¯Ä»Á´
+void emptyBulletLink(BulletNode *const headBulletNode);
 
 
 //µ¯Ä»¹ì¼£º¯Êý

@@ -59,3 +59,15 @@ void freshBulletLink(BulletNode *const headBulletNode)
 
 	}
 }
+
+void emptyBulletLink(BulletNode * const headBulletNode)
+{
+	BulletNode * ptr;
+	ptr = headBulletNode;
+	while (ptr->next!=NULL)
+	{
+		ptr = ptr->next;
+		delete ptr->prev;
+	}
+	delete ptr;
+}
