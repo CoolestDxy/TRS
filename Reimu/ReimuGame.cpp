@@ -30,11 +30,11 @@ int main()
 	//重新初始化（上面的初始化废弃）
 	for (int i = 0; i < 20; i++)
 	{
-		a[i].initialization({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_sin, WHITE);
-		b[i].initialization({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_line, YELLOW);
-		c[i].initialization({ 160, 120 }, 5, i / 20.0 * 2 * Pi, trail_sin, BLUE);
-		d[i].initialization({ 480, 120 }, 5, i / 20.0 * 2 * Pi, trail_sin, GREEN);
-		e[i].initialization({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_0, RED);
+		a[i].initialization({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_sin, WHITE,1000);
+		b[i].initialization({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_line, YELLOW,2000);
+		c[i].initialization({ 160, 120 }, 5, i / 20.0 * 2 * Pi, trail_sin, BLUE,3000);
+		d[i].initialization({ 480, 120 }, 5, i / 20.0 * 2 * Pi, trail_sin, GREEN,4000);
+		e[i].initialization({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_0, RED,5000);
 		f[i].initialization({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_1, WHITE);
 		g[i].initialization({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_2, RED);
 		h[i].initialization({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_3, WHITE);
