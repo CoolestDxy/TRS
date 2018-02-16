@@ -88,7 +88,7 @@ public:
 		void(*trail_)(int, Location&, Location&) = trail_stop,
 		int color_ = WHITE,
 		unsigned long  startTime_ = 0
-		);
+	);
 	//Ë¢ÐÂµ¯Ä»&Åö×²ÅÐ¶¨
 	void fresh();
 };
@@ -102,6 +102,12 @@ public:
 	struct BulletNode * next;
 };
 
+//Íùµ¯Ä»Á´ÖÐÑ¹ÈëÐÂµ¯Ä»
+void pushBullet(BulletNode * const headBulletNode, Bullet * const bullet);
+//´Óµ¯Ä»Á´ÖÐµ¯³öµ¯Ä»
+void popBullet(BulletNode *const headBulletNode, Bullet * const bullet);
+//Ë¢ÐÂ£¨»æÖÆ£©µ¯Ä»Á´
+void freshBulletLink(BulletNode *const headBulletNode);
 
 
 //µ¯Ä»¹ì¼£º¯Êý
