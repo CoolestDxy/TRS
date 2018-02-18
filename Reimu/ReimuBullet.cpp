@@ -26,6 +26,7 @@ Bullet::Bullet
 {
 	//赋值
 	initialLocate = b_;
+	locate = b_;
 	r = r_;
 	angle = angle_;
 	trail = trail_;
@@ -91,6 +92,7 @@ void Bullet::initialization
 )
 {
 	initialLocate = b_;
+	locate = b_;
 	r = r_;
 	angle = angle_;
 	trail = trail_;

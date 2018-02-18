@@ -14,6 +14,7 @@ void pushBullet(BulletNode * const headBulletNode, Bullet * const bullet)
 		if (ptr->bullet == NULL)
 		{
 			ptr->bullet = bullet;
+			return;
 		}
 	}
 	ptr->next = new BulletNode;
