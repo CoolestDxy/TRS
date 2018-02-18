@@ -1,5 +1,5 @@
 //ReimuSelf.cpp
-//定义自机相关的函数
+//自机相关函数
 
 #include"ReimuHeadFile.h"
 #include"ReimuDatasheet.h"

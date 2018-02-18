@@ -1,5 +1,5 @@
 //ReimuBackGround.cpp
-//定义背景相关的函数
+//背景相关函数
 
 #include"ReimuDatasheet.h"
 #include"ReimuHeadFile.h"

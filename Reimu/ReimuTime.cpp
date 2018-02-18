@@ -1,5 +1,5 @@
 //ReimuTime.cpp
-//定义时间相关的函数
+//时间相关函数
 
 #include"ReimuHeadFile.h"
 
