@@ -63,7 +63,15 @@ private:
 	Location deltaLocate;	//距离差
 	int r;			//弹幕半径
 	double angle;	//绘制角度
-	void(*trail)(int, Location&, Location&);//路径样式
+	void(*trail)
+		(
+		const int time,								//时间
+		Location &bulletLocation,					//弹幕坐标位置
+		const Location bulletInitialLocation,		//弹幕坐标初始位置
+		const Location selfLocation,				//自机位置
+		const double angle							//初始角度
+		)
+		;//路径样式
 	SysTime time;	//时间
 	int color;		//颜色
 	unsigned long startTime;	//生成时间

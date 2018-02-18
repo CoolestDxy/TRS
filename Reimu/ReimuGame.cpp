@@ -18,6 +18,7 @@ int main()
 	//生成弹幕链
 	BulletNode * headBulletNode;
 	headBulletNode = new BulletNode;
+	pushBullet(headBulletNode, new Bullet);
 
 
 	initgraph(SCREEN_WIDTH, SCREEN_LENGTH);	//初始化UI界面
