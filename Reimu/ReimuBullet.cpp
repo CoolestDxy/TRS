@@ -78,7 +78,14 @@ void Bullet::initialization
 	const Location b_,
 	const int r_,
 	const double angle_,
-	void(*trail_)(int, Location&, Location&),
+	void(*trail_)
+		(
+		const int time,								//时间
+		Location &bulletLocation,					//弹幕坐标位置
+		const Location bulletInitialLocation,		//弹幕坐标初始位置
+		const Location selfLocation,				//自机位置
+		const double angle							//初始角度
+		),
 	int color_,
 	unsigned long startTime_
 )
