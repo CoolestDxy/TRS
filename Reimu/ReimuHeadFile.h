@@ -82,7 +82,15 @@ public:
 		const Location b_ = { 100,100 },
 		const int r_ = 5,
 		const double angle_ = 0,
-		void(*trail_)(int, Location&, Location&) = trail_stop,
+		void(*trail_)
+			(
+			const int time,								//时间
+			Location &bulletLocation,					//弹幕坐标位置
+			const Location bulletInitialLocation,		//弹幕坐标初始位置
+			const Location selfLocation,				//自机位置
+			const double angle							//初始角度
+			)
+		= trail_stop,
 		int color_ = WHITE,
 		unsigned long startTime_ = 0	//出现时间
 	);

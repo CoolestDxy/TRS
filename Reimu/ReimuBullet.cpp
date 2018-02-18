@@ -11,7 +11,15 @@ Bullet::Bullet
 	const Location b_,
 	const int r_,
 	const double angle_,
-	void(*trail_)(int, Location&, Location&),
+	void(*trail_)
+		(
+		const int time,								//时间
+		Location &bulletLocation,					//弹幕坐标位置
+		const Location bulletInitialLocation,		//弹幕坐标初始位置
+		const Location selfLocation,				//自机位置
+		const double angle							//初始角度
+		)
+	,
 	int color_,
 	unsigned long startTime_
 )
@@ -31,13 +39,7 @@ void Bullet::fresh()
 	{
 		//计算自然坐标
 		Location temp;
-		trail(time.now()-startTime, temp, self.pointLocate());
-		//转化为全局坐标
-		locate =
-		{
-			static_cast<int>(initialLocate.x + temp.x*cos(angle) - temp.y*sin(angle)),
-			static_cast<int>(initialLocate.y + temp.x*sin(angle) + temp.y*cos(angle))
-		};
+		trail(time.now()-startTime, this->locate,this->initialLocate, self.pointLocate(),this->angle);
 		//绘制弹幕
 		setlinecolor(WHITE);
 		setfillcolor(color);
