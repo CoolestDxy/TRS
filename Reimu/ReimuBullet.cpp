@@ -67,11 +67,6 @@ void Bullet::fresh()
 			self.leastPlayer--;
 		}
 	}
-	//恢复为7秒前的状态（for demo）
-	if (time.now() > 7000)
-	{
-		time.start();
-	}
 }
 
 void Bullet::initialization
