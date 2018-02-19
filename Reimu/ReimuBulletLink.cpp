@@ -30,12 +30,12 @@ void popBullet(BulletNode *const headBulletNode, Bullet * const bullet)
 	while (ptr->next!=NULL)
 	{
 		ptr = ptr->next;
-		if (ptr->bullet==NULL)
+		if (ptr->bullet==bullet)
 		{
+			ptr->bullet = NULL;
 			return;
 		};
 	}
-	ptr->bullet = NULL;
 }
 
 void freshBulletLink(BulletNode *const headBulletNode)
@@ -48,7 +48,10 @@ void freshBulletLink(BulletNode *const headBulletNode)
 		if (ptr->bullet==NULL)
 		{
 			ptr->prev->next = ptr->next;
-			ptr->next->prev = ptr->prev;
+			if (ptr->next != NULL)
+			{
+				ptr->next->prev = ptr->prev;
+			}
 			BulletNode * temp;
 			temp = ptr;
 			ptr = ptr->prev;
@@ -57,7 +60,7 @@ void freshBulletLink(BulletNode *const headBulletNode)
 		}
 		else
 		{
-			ptr->bullet->fresh();
+			ptr->bullet->fresh(headBulletNode);
 		}
 
 	}

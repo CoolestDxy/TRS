@@ -37,7 +37,6 @@ int main()
 	}
 
 
-
 	initgraph(SCREEN_WIDTH, SCREEN_LENGTH);	//初始化UI界面
 	while (self.leastPlayer > 0)	//存活判定
 	{

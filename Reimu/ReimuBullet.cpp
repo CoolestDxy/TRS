@@ -12,7 +12,7 @@ Bullet::Bullet
 	const int r_,
 	const double angle_,
 	void(*trail_)
-		(
+	(
 		const int time,								//时间
 		Location &bulletLocation,					//弹幕坐标位置
 		const Location bulletInitialLocation,		//弹幕坐标初始位置
@@ -34,13 +34,13 @@ Bullet::Bullet
 	startTime = startTime_;
 }
 
-void Bullet::fresh()
+void Bullet::fresh(BulletNode * headBulletNode)
 {
 	if (startTime <= sysTime.now())
 	{
 		//计算自然坐标
 		Location temp;
-		trail(time.now()-startTime, this->locate,this->initialLocate, self.pointLocate(),this->angle);
+		trail(time.now() - startTime, this->locate, this->initialLocate, self.pointLocate(), this->angle);
 		//绘制弹幕
 		setlinecolor(WHITE);
 		setfillcolor(color);
@@ -67,6 +67,17 @@ void Bullet::fresh()
 			self.leastPlayer--;
 		}
 	}
+	//越界从弹幕链弹出该弹幕
+	if
+		(
+			this->locate.y - r >= SCREEN_LENGTH ||
+			this->locate.x - r >= SCREEN_WIDTH ||
+			this->locate.x + r <= 0 ||
+			this->locate.y + r <= 0
+			)
+	{
+		popBullet(headBulletNode, this);
+	}
 }
 
 void Bullet::initialization
@@ -75,7 +86,7 @@ void Bullet::initialization
 	const int r_,
 	const double angle_,
 	void(*trail_)
-		(
+	(
 		const int time,								//时间
 		Location &bulletLocation,					//弹幕坐标位置
 		const Location bulletInitialLocation,		//弹幕坐标初始位置

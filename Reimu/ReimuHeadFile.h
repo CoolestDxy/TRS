@@ -61,6 +61,8 @@ void trail_stop
 	const double angle							//初始角度
 );	//时间，自机坐标，弹幕坐标
 
+class BulletNode;
+
 //弹幕
 
 class Bullet
@@ -121,7 +123,7 @@ public:
 		unsigned long  startTime_ = 0
 	);
 	//刷新弹幕&碰撞判定
-	void fresh();
+	void fresh(BulletNode * headBulletNode);
 };
 
 //弹幕链系统
