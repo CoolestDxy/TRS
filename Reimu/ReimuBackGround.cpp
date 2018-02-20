@@ -4,12 +4,11 @@
 #include"ReimuDatasheet.h"
 #include"ReimuHeadFile.h"
 
-
 extern IMAGE backGround;
 
-void backGroundInitialize()
+void backGroundInitialize(IMAGE * backGround)
 {
-	loadimage(&backGround, _T(BACKG_ROUND_IMAGINE));
+	loadimage(backGround, _T(BACKG_ROUND_IMAGINE));
 }
 void backGroundDraw()
 {

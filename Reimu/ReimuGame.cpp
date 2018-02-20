@@ -10,11 +10,10 @@ Self self;
 IMAGE backGround;
 SysTime sysTime;
 
-
 int main()
 {
 	//背景初始化
-	backGroundInitialize();
+	backGroundInitialize(&backGround);
 	//生成弹幕链
 	BulletNode * headBulletNode;
 	headBulletNode = new BulletNode;
@@ -35,8 +34,7 @@ int main()
 		pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_2, RED, 7000));
 		pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_3, WHITE, 8000));
 	}
-
-
+	 
 	initgraph(SCREEN_WIDTH, SCREEN_LENGTH);	//初始化UI界面
 	while (self.leastPlayer > 0)	//存活判定
 	{
@@ -52,6 +50,12 @@ int main()
 		FlushBatchDraw();
 		//解锁帧率，否则请Sleep();
 		Sleep(20);
+
+		//临时Pass判定
+		if (sysTime.now()>=20000)
+		{
+			break;
+		}
 	}
 	//清理弹幕链，释放资源
 	emptyBulletLink(headBulletNode);

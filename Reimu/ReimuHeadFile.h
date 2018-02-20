@@ -30,7 +30,7 @@ struct Location
 };
 
 //背景
-void backGroundInitialize();
+void backGroundInitialize(IMAGE * backGround);
 void backGroundDraw();
 
 //自机
@@ -48,6 +48,9 @@ public:
 	void Moveself();	//自身移动
 	Location pointLocate();	//返回判定点坐标
 };
+
+//游戏结束胜负判定函数
+void gameEnding(Self * self);
 
 extern Self self;
 
