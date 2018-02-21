@@ -6,7 +6,7 @@
 
 void backGroundInitialize(IMAGE * backGround)
 {
-	loadimage(backGround, _T(BACKG_ROUND_IMAGINE));
+	loadimage(backGround, _T(BACKGROUND_IMAGINE));
 }
 void backGroundDraw(IMAGE * backGround)
 {
