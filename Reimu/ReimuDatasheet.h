@@ -3,7 +3,11 @@
 //参数设定文件
 
 //背景图地址
-#define BACKG_ROUND_IMAGINE ".\\backGround\\backGround.jpg"
+#define BACKGROUND_IMAGINE ".\\backGround\\backGround.jpg"
+//通关背景地址
+#define ENDING_GOOD_ENDING ".\\Ending\\GoodEnd.jpg"
+//通关背景地址
+#define ENDING_BAD_ENDING ".\\Ending\\BadEnd.jpg"
 //屏幕高度
 const int  SCREEN_LENGTH = 480;
 //屏幕宽度

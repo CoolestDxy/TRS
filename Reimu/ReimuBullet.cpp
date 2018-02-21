@@ -45,7 +45,6 @@ void Bullet::fresh(BulletNode * headBulletNode)
 		setlinecolor(WHITE);
 		setfillcolor(color);
 		fillcircle(locate.x, locate.y, r);
-		setfillcolor(WHITE);
 		//自机判定
 		//计算全局坐标位置插值
 		deltaLocate =

@@ -31,7 +31,7 @@ struct Location
 
 //±³¾°
 void backGroundInitialize(IMAGE * backGround);
-void backGroundDraw();
+void backGroundDraw(IMAGE * backGround);
 
 //×Ô»ú
 class Self

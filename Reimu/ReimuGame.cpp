@@ -41,7 +41,7 @@ int main()
 		//开始批量绘图
 		BeginBatchDraw();
 		//背景绘制
-		backGroundDraw();
+		backGroundDraw(&backGround);
 		//自机移动
 		self.Moveself();
 		//刷新弹幕
@@ -52,13 +52,14 @@ int main()
 		Sleep(20);
 
 		//临时Pass判定
-		if (sysTime.now()>=20000)
+		if (sysTime.now()>=12000)
 		{
 			break;
 		}
 	}
 	//清理弹幕链，释放资源
 	emptyBulletLink(headBulletNode);
+	gameEnding(&self);
 	//空循环等待
 	//TODO..实现失败界面
 	for (;;)
