@@ -62,10 +62,9 @@ int main()
 	gameEnding(&self);
 	//空循环等待
 	//TODO..实现失败界面
-	for (;;)
+	for (int i=0;i<3;i++)
 	{
 		Sleep(1000);
 	}
-	//TODO……替换为显示游戏失败界面。
 	closegraph();
 }
