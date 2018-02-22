@@ -57,7 +57,7 @@ extern Self self;
 //静止弹幕（默认值用）
 void trail_stop
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
@@ -77,7 +77,7 @@ private:
 	double angle;	//绘制角度
 	void(*trail)
 		(
-		const int time,								//时间
+		const int time,									//时间
 		Location &bulletLocation,					//弹幕坐标位置
 		const Location bulletInitialLocation,		//弹幕坐标初始位置
 		const Location selfLocation,				//自机位置
@@ -96,7 +96,7 @@ public:
 		const double angle_ = 0,
 		void(*trail_)
 			(
-			const int time,								//时间
+			const int time,									//时间
 			Location &bulletLocation,					//弹幕坐标位置
 			const Location bulletInitialLocation,		//弹幕坐标初始位置
 			const Location selfLocation,				//自机位置
@@ -115,7 +115,7 @@ public:
 		const double angle_ = 0,
 		void(*trail_)
 			(
-			const int time,								//时间
+			const int time,									//时间
 			Location &bulletLocation,					//弹幕坐标位置
 			const Location bulletInitialLocation,		//弹幕坐标初始位置
 			const Location selfLocation,				//自机位置
@@ -153,7 +153,7 @@ void emptyBulletLink(BulletNode *const headBulletNode);
 //直线轨迹
 void trail_line
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
@@ -162,7 +162,7 @@ void trail_line
 //蛇形轨迹
 void trail_sin
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
@@ -172,7 +172,7 @@ void trail_sin
 //圆形轨迹(逆时针)
 void trail_circle_0
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
@@ -182,7 +182,7 @@ void trail_circle_0
 //圆形轨迹(顺时针)
 void trail_circle_1
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
@@ -191,7 +191,7 @@ void trail_circle_1
 //圆形巡回轨迹(逆时针)
 void trail_circle_2
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
@@ -200,7 +200,7 @@ void trail_circle_2
 //圆形巡回轨迹(顺时针)
 void trail_circle_3
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
@@ -209,7 +209,7 @@ void trail_circle_3
 //追踪弹幕轨迹
 void trail_follow
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置

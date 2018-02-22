@@ -6,7 +6,7 @@
 
 void trail_line
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
@@ -28,7 +28,7 @@ void trail_line
 }
 void trail_sin
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
@@ -50,7 +50,7 @@ void trail_sin
 }
 void trail_circle_0
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
@@ -72,7 +72,7 @@ void trail_circle_0
 }
 void trail_circle_1
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
@@ -94,7 +94,7 @@ void trail_circle_1
 }
 void trail_circle_2
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
@@ -117,7 +117,7 @@ void trail_circle_2
 }
 void trail_circle_3
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
@@ -139,7 +139,7 @@ void trail_circle_3
 }
 void trail_stop
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
@@ -161,7 +161,7 @@ void trail_stop
 }
 void trail_follow
 (
-	const int time,								//时间
+	const int time,									//时间
 	Location &bulletLocation,					//弹幕坐标位置
 	const Location bulletInitialLocation,		//弹幕坐标初始位置
 	const Location selfLocation,				//自机位置
