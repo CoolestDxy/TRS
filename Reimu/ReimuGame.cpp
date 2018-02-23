@@ -12,6 +12,10 @@ SysTime sysTime;
 
 int main()
 {
+	//初始化UI界面
+	initgraph(SCREEN_WIDTH, SCREEN_LENGTH);	
+	//游戏开始界面
+	gameLeader();
 	//背景初始化
 	backGroundInitialize(&backGround);
 	//生成弹幕链
@@ -34,8 +38,7 @@ int main()
 		pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_2, RED, 7000));
 		pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_3, WHITE, 8000));
 	}
-	 
-	initgraph(SCREEN_WIDTH, SCREEN_LENGTH);	//初始化UI界面
+	sysTime.start();
 	while (self.leastPlayer > 0)	//存活判定
 	{
 		//开始批量绘图

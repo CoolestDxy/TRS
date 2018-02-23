@@ -2,11 +2,12 @@
 //Mowu_datasheet.h
 //参数设定文件
 
-//背景图地址
+//游戏引导背景图地址
+#define GAMELOAD_IMAGINE "\\gameLoader\\gameLoader.jpg"
+//主背景图地址
 #define BACKGROUND_IMAGINE ".\\backGround\\backGround.jpg"
-//通关背景地址
-#define ENDING_GOOD_ENDING ".\\Ending\\GoodEnd.jpg"
-//通关背景地址
+//游戏结束背景图地址
+#define ENDING_GOOD_IMAGINE ".\\Ending\\GoodEnd.jpg"
 #define ENDING_BAD_ENDING ".\\Ending\\BadEnd.jpg"
 //屏幕高度
 const int  SCREEN_LENGTH = 480;

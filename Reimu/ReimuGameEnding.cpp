@@ -10,7 +10,7 @@ void gameEnding(Self * self)
 {
 	if (self->leastPlayer>0)		//≈–∂œ «∑Ò¥ÊªÓ
 	{
-		loadimage(&ending ,_T(ENDING_GOOD_ENDING));
+		loadimage(&ending ,_T(ENDING_GOOD_IMAGINE));
 	}
 	else
 	{
