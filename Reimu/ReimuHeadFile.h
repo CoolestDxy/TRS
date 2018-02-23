@@ -49,6 +49,8 @@ public:
 	Location pointLocate();	//返回判定点坐标
 };
 
+//游戏开场动画
+int gameLeader();
 //游戏结束胜负判定函数
 void gameEnding(Self * self);
 
