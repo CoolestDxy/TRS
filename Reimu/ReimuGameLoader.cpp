@@ -6,9 +6,13 @@
 
 int gameLeader()
 {
+	//开始批量绘图
+	BeginBatchDraw();
 	IMAGE gameLoader;
 	loadimage(&gameLoader, _T(GAMELOAD_IMAGINE));
 	putimage(0, 0, &gameLoader);
-	//Sleep(3000);
+	//结束绘图释放缓冲
+	FlushBatchDraw();
+	Sleep(3000);
 	return 0;
 }

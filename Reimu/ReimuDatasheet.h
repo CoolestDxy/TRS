@@ -3,7 +3,7 @@
 //参数设定文件
 
 //游戏引导背景图地址
-#define GAMELOAD_IMAGINE "\\gameLoader\\gameLoader.jpg"
+#define GAMELOAD_IMAGINE ".\\gameLoader\\gameLoader.jpg"
 //主背景图地址
 #define BACKGROUND_IMAGINE ".\\backGround\\backGround.jpg"
 //游戏结束背景图地址

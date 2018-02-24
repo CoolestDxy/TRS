@@ -86,7 +86,6 @@ private:
 		const double angle							//初始角度
 		)
 		;//路径样式
-	SysTime time;	//时间
 	int color;		//颜色
 	unsigned long startTime;	//生成时间
 public:

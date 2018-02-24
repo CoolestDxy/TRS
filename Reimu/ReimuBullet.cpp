@@ -40,7 +40,7 @@ void Bullet::fresh(BulletNode * headBulletNode)
 	{
 		//计算自然坐标
 		Location temp;
-		trail(time.now() - startTime, this->locate, this->initialLocate, self.pointLocate(), this->angle);
+		trail(sysTime.now() - startTime, this->locate, this->initialLocate, self.pointLocate(), this->angle);
 		//绘制弹幕
 		setlinecolor(WHITE);
 		setfillcolor(color);
