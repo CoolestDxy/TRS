@@ -45,6 +45,9 @@
     <ClCompile Include="ReimuGameLoader.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leadinFromFile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ReimuHeadFile.h">

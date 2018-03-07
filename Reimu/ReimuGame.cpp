@@ -23,7 +23,7 @@ int main()
 	headBulletNode = new BulletNode;
 	headBulletNode->next = NULL;
 	Bullet * example = new Bullet;
-	//pushBullet(headBulletNode, new Bullet);
+	pushBullet(headBulletNode, new Bullet);
 	example->initialization({ 320, 240 }, 5, 0, trail_sin, WHITE, 0);
 	pushBullet(headBulletNode, example);
 	pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, 1 / 20.0 * 2 * Pi, trail_sin, WHITE, 1000));

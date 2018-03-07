@@ -5,6 +5,7 @@
 #include<conio.h>
 #include<ctime>
 #include<cmath>
+#include<fstream>
 #include"ReimuDatasheet.h"
 
 //时间系统
@@ -91,13 +92,14 @@ private:
 public:
 	Location locate;	//坐标位置
 
-	Bullet(			//默认值
-		const Location b_ = { 100,100 },
-		const int r_ = 5,
-		const double angle_ = 0,
+	Bullet			//默认值
+	(
+		Location b_ = { 100,100 },
+		int r_ = 5,
+		double angle_ = 0,
 		void(*trail_)
 			(
-			const int time,									//时间
+			const int time,								//时间
 			Location &bulletLocation,					//弹幕坐标位置
 			const Location bulletInitialLocation,		//弹幕坐标初始位置
 			const Location selfLocation,				//自机位置
@@ -111,9 +113,9 @@ public:
 	//初始化弹幕
 	void initialization
 	(
-		const Location b_ = { 100,100 },
-		const int r_ = 5,
-		const double angle_ = 0,
+		Location b_ = { 100,100 },
+		int r_ = 5,
+		double angle_ = 0,
 		void(*trail_)
 			(
 			const int time,									//时间
@@ -135,8 +137,8 @@ class BulletNode
 {
 public:
 	Bullet * bullet;
-	struct BulletNode * prev;
-	struct BulletNode * next;
+	class BulletNode * prev;
+	class BulletNode * next;
 };
 
 //往弹幕链中压入新弹幕
@@ -147,6 +149,9 @@ void popBullet(BulletNode *const headBulletNode, Bullet * const bullet);
 void freshBulletLink(BulletNode * headBulletNode);
 //清空弹幕链
 void emptyBulletLink(BulletNode *const headBulletNode);
+
+//从文件读入弹幕信息
+void leadinFromFile();
 
 
 //弹幕轨迹函数
