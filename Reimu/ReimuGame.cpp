@@ -29,14 +29,19 @@ int main()
 	pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, 1 / 20.0 * 2 * Pi, trail_sin, WHITE, 1000));
 	for (int i = 0; i < 20; i++)
 	{
-		pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_sin, WHITE, 1000));
-		pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_line, YELLOW, 2000));
-		pushBullet(headBulletNode, new Bullet({ 160, 120 }, 5, i / 20.0 * 2 * Pi, trail_sin, BLUE, 3000));
-		pushBullet(headBulletNode, new Bullet({ 480, 120 }, 5, i / 20.0 * 2 * Pi, trail_sin, GREEN, 4000));
-		pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_0, RED, 5000));
-		pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_1, WHITE, 6000));
-		pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_2, RED, 7000));
-		pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_3, WHITE, 8000));
+		for (int j = 0; j < 100; j++)
+		{
+			pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_sin, WHITE, 1000 + 100 * j));
+			pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_sin, WHITE, 3000 - 100 * j));
+			pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_line, YELLOW, 2000));
+			pushBullet(headBulletNode, new Bullet({ 160, 120 }, 5, i / 20.0 * 2 * Pi, trail_sin, BLUE, 3000));
+			pushBullet(headBulletNode, new Bullet({ 480, 120 }, 5, i / 20.0 * 2 * Pi, trail_sin, GREEN, 4000));
+			pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_0, RED, 5000));
+			pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_1, WHITE, 6000));
+			pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_2, RED, 7000));
+			pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_3, WHITE, 8000));
+			pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_sin, WHITE, 3000 - 10 * j));
+		}
 	}
 	sysTime.start();
 	while (self.leastPlayer > 0)	//存活判定
