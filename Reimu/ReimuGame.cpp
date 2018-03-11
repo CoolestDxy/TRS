@@ -60,7 +60,7 @@ int main()
 		Sleep(20);
 
 		//临时Pass判定
-		if (sysTime.now()>=12000)
+		if (sysTime.now()>=16000)
 		{
 			break;
 		}
