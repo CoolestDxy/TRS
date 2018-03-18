@@ -23,23 +23,22 @@ int main()
 	headBulletNode = new BulletNode;
 	headBulletNode->next = NULL;
 	Bullet * example = new Bullet;
-	pushBullet(headBulletNode, new Bullet);
 	example->initialization({ 320, 240 }, 5, 0, trail_sin, WHITE, 0);
 	pushBullet(headBulletNode, example);
 	pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, 1 / 20.0 * 2 * Pi, trail_sin, WHITE, 1000));
 	for (int i = 0; i < 20; i++)
 	{
-		for (int j = 0; j < 100; j++)
+		for (int j = 0; j < 10; j++)
 		{
-			pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_sin, WHITE, 1000 + 100 * j));
-			pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_sin, WHITE, 3000 - 100 * j));
-			pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_line, YELLOW, 2000));
-			pushBullet(headBulletNode, new Bullet({ 160, 120 }, 5, i / 20.0 * 2 * Pi, trail_sin, BLUE, 3000));
-			pushBullet(headBulletNode, new Bullet({ 480, 120 }, 5, i / 20.0 * 2 * Pi, trail_sin, GREEN, 4000));
-			pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_0, RED, 5000));
-			pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_1, WHITE, 6000));
-			pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_2, RED, 7000));
-			pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_3, WHITE, 8000));
+			pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_sin, WHITE, 1000 + 500 * j));
+			pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_sin, WHITE, 3000 - 500 * j));
+			pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_line, YELLOW, 2000 + 500 * j));
+			pushBullet(headBulletNode, new Bullet({ 160, 120 }, 5, i / 20.0 * 2 * Pi, trail_sin, BLUE, 3000 + 500 * j));
+			pushBullet(headBulletNode, new Bullet({ 480, 120 }, 5, i / 20.0 * 2 * Pi, trail_sin, GREEN, 4000 + 500 * j));
+			pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_0, RED, 5000 + 500 * j));
+			pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_1, WHITE, 6000 + 500 * j));
+			pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_2, RED, 7000 + 500 * j));
+			pushBullet(headBulletNode, new Bullet({ 320, 120 }, 5, i / 20.0 * 2 * Pi, trail_circle_3, WHITE, 8000 + 500 * j));
 			pushBullet(headBulletNode, new Bullet({ 320, 240 }, 5, i / 20.0 * 2 * Pi, trail_sin, WHITE, 3000 - 10 * j));
 		}
 	}
