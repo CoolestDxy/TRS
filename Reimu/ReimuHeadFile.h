@@ -136,7 +136,6 @@ public:
 class BulletNode
 {
 public:
-	BulletNode();
 	Bullet * bullet;
 	class BulletNode * prev;
 	class BulletNode * next;
@@ -152,8 +151,7 @@ void freshBulletLink(BulletNode * headBulletNode);
 void emptyBulletLink(BulletNode *const headBulletNode);
 
 //从文件读入弹幕信息
-void leadinFromFile();
-
+void ReimuLeadinFromFile(BulletNode * headBulletNode, char * fileName);
 
 //弹幕轨迹函数
 

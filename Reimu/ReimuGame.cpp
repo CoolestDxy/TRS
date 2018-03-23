@@ -22,7 +22,7 @@ int main()
 	BulletNode * headBulletNode;
 	headBulletNode = new BulletNode;
 	headBulletNode->next = NULL;
-
+	//ReimuLeadinFromFile(headBulletNode,"test.data");
 	Bullet * example = new Bullet;
 	example->initialization({ 320, 240 }, 5, 0, trail_sin, WHITE, 0);
 	pushBullet(headBulletNode, example);

@@ -1,9 +1,9 @@
-//leadinFromFile.cpp
+//ReimuLeadinFromFile.cpp
 //从文件读取弹幕信息函数
 
 #include"ReimuHeadFile.h"
 
-void leadinFromFile(BulletNode * headBulletNode, char * fileName)
+void ReimuLeadinFromFile(BulletNode * headBulletNode, char * fileName)
 {
 	std::ifstream dataLeader;
 	dataLeader.open(fileName);
