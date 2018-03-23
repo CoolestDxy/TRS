@@ -136,6 +136,7 @@ public:
 class BulletNode
 {
 public:
+	BulletNode();
 	Bullet * bullet;
 	class BulletNode * prev;
 	class BulletNode * next;
