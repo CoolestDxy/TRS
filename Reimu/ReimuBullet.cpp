@@ -20,9 +20,13 @@ Bullet::Bullet
 		const double angle							//初始角度
 		),
 	int color_,
-	unsigned long startTime_	//出现时间
+	long startTime_	//出现时间
 )
 {
+	if (startTime_ < 0)
+	{
+		startTime = 0;
+	}
 	//赋值
 	initialLocate = b_;
 	locate = b_;
@@ -30,7 +34,7 @@ Bullet::Bullet
 	angle = angle_;
 	trail = trail_;
 	color = color_;
-	startTime = startTime_;
+	startTime = startTime_ > 0 ? startTime_ : 0;
 }
 
 void Bullet::fresh(BulletNode * headBulletNode)
@@ -92,7 +96,7 @@ void Bullet::initialization
 		const double angle							//初始角度
 		),
 	int color_,
-	unsigned long startTime_
+	long startTime_
 )
 {
 	initialLocate = b_;
@@ -101,5 +105,5 @@ void Bullet::initialization
 	angle = angle_;
 	trail = trail_;
 	color = color_;
-	startTime = startTime_;
+	startTime = startTime_ > 0 ? startTime_ : 0;
 }

@@ -4,6 +4,10 @@
 #include"ReimuDatasheet.h"
 #include"ReimuHeadFile.h"
 
+bool BulletNode::isEmpty()
+{
+	return this->next&&true;
+}
 void pushBullet(BulletNode * const headBulletNode, Bullet * const bullet)
 {
 	BulletNode * ptr;

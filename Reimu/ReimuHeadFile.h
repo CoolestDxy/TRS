@@ -20,7 +20,7 @@ public:
 	void start();
 	//获取当前时间
 	//返回unsigned long类型的毫秒数
-	unsigned long now();
+	long now();
 };
 
 //坐标
@@ -88,7 +88,7 @@ private:
 		)
 		;//路径样式
 	int color;		//颜色
-	unsigned long startTime;	//生成时间
+	long startTime;	//生成时间
 public:
 	Location locate;	//坐标位置
 
@@ -107,7 +107,7 @@ public:
 			)
 		= trail_stop,
 		int color_ = WHITE,
-		unsigned long startTime_ = 0	//出现时间
+		long startTime_ = 0	//出现时间
 	);
 
 	//初始化弹幕
@@ -126,7 +126,7 @@ public:
 			)
 		= trail_stop,
 		int color_ = WHITE,
-		unsigned long  startTime_ = 0
+		long  startTime_ = 0
 	);
 	//刷新弹幕&碰撞判定
 	void fresh(BulletNode * headBulletNode);
@@ -139,6 +139,7 @@ public:
 	Bullet * bullet;
 	class BulletNode * prev;
 	class BulletNode * next;
+	bool isEmpty();
 };
 
 //往弹幕链中压入新弹幕
