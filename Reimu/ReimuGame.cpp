@@ -44,7 +44,7 @@ int main()
 		}
 	}
 	sysTime.start();
-	while ((self.leastPlayer > 0||true)&&headBulletNode->isEmpty())	//存活判定
+	while ((self.leastPlayer > 0||0)&&headBulletNode->isEmpty())	//存活判定
 	{
 		//开始批量绘图
 		BeginBatchDraw();
