@@ -1,5 +1,6 @@
 # 数据文件规范
 # The formart of the data file
+# 繁忙，暂停开发
 
 ## 大纲
 * 数据文件首行为当前关卡介绍信息
