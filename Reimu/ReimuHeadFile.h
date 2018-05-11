@@ -45,6 +45,7 @@ public:
 	Location location;	//图像位置（绘图原点）
 	Location pictureSize;	//图像尺寸
 	int leastPlayer = 1;	//残机数
+	int lastBoom = 1;		//B数
 	Self();
 	void Moveself();	//自身移动
 	Location pointLocate();	//返回判定点坐标
