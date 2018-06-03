@@ -5,6 +5,7 @@
 #include<conio.h>
 #include<ctime>
 #include<cmath>
+#include<fstream>
 #include"ReimuDatasheet.h"
 
 //时间系统
@@ -19,7 +20,7 @@ public:
 	void start();
 	//获取当前时间
 	//返回unsigned long类型的毫秒数
-	unsigned long now();
+	long now();
 };
 
 //坐标
@@ -44,9 +45,11 @@ public:
 	Location location;	//图像位置（绘图原点）
 	Location pictureSize;	//图像尺寸
 	int leastPlayer = 1;	//残机数
+	int lastBoom = 1;		//剩余B点
 	Self();
 	void Moveself();	//自身移动
 	Location pointLocate();	//返回判定点坐标
+	int getLastBoom();		//返回剩余B点
 };
 
 //游戏开场动画
@@ -87,17 +90,18 @@ private:
 		)
 		;//路径样式
 	int color;		//颜色
-	unsigned long startTime;	//生成时间
+	long startTime;	//生成时间
 public:
 	Location locate;	//坐标位置
 
-	Bullet(			//默认值
-		const Location b_ = { 100,100 },
-		const int r_ = 5,
-		const double angle_ = 0,
+	Bullet			//默认值
+	(
+		Location b_ = { 100,100 },
+		int r_ = 5,
+		double angle_ = 0,
 		void(*trail_)
 			(
-			const int time,									//时间
+			const int time,								//时间
 			Location &bulletLocation,					//弹幕坐标位置
 			const Location bulletInitialLocation,		//弹幕坐标初始位置
 			const Location selfLocation,				//自机位置
@@ -105,15 +109,15 @@ public:
 			)
 		= trail_stop,
 		int color_ = WHITE,
-		unsigned long startTime_ = 0	//出现时间
+		long startTime_ = 0	//出现时间
 	);
 
 	//初始化弹幕
 	void initialization
 	(
-		const Location b_ = { 100,100 },
-		const int r_ = 5,
-		const double angle_ = 0,
+		Location b_ = { 100,100 },
+		int r_ = 5,
+		double angle_ = 0,
 		void(*trail_)
 			(
 			const int time,									//时间
@@ -124,7 +128,7 @@ public:
 			)
 		= trail_stop,
 		int color_ = WHITE,
-		unsigned long  startTime_ = 0
+		long  startTime_ = 0
 	);
 	//刷新弹幕&碰撞判定
 	void fresh(BulletNode * headBulletNode);
@@ -135,8 +139,9 @@ class BulletNode
 {
 public:
 	Bullet * bullet;
-	struct BulletNode * prev;
-	struct BulletNode * next;
+	class BulletNode * prev;
+	class BulletNode * next;
+	bool isEmpty();
 };
 
 //往弹幕链中压入新弹幕
@@ -148,6 +153,8 @@ void freshBulletLink(BulletNode * headBulletNode);
 //清空弹幕链
 void emptyBulletLink(BulletNode *const headBulletNode);
 
+//从文件读入弹幕信息
+void ReimuLeadinFromFile(BulletNode * headBulletNode, char * fileName);
 
 //弹幕轨迹函数
 

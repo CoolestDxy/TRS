@@ -8,9 +8,9 @@ extern SysTime sysTime;
 
 Bullet::Bullet
 (
-	const Location b_,
-	const int r_,
-	const double angle_,
+	Location b_,
+	int r_,
+	double angle_,
 	void(*trail_)
 	(
 		const int time,								//时间
@@ -18,12 +18,15 @@ Bullet::Bullet
 		const Location bulletInitialLocation,		//弹幕坐标初始位置
 		const Location selfLocation,				//自机位置
 		const double angle							//初始角度
-		)
-	,
+		),
 	int color_,
-	unsigned long startTime_
+	long startTime_	//出现时间
 )
 {
+	if (startTime_ < 0)
+	{
+		startTime = 0;
+	}
 	//赋值
 	initialLocate = b_;
 	locate = b_;
@@ -31,7 +34,7 @@ Bullet::Bullet
 	angle = angle_;
 	trail = trail_;
 	color = color_;
-	startTime = startTime_;
+	startTime = startTime_ > 0 ? startTime_ : 0;
 }
 
 void Bullet::fresh(BulletNode * headBulletNode)
@@ -39,7 +42,7 @@ void Bullet::fresh(BulletNode * headBulletNode)
 	if (startTime <= sysTime.now())
 	{
 		//计算自然坐标
-		Location temp;
+		//Location temp;
 		trail(sysTime.now() - startTime, this->locate, this->initialLocate, self.pointLocate(), this->angle);
 		//绘制弹幕
 		setlinecolor(WHITE);
@@ -81,9 +84,9 @@ void Bullet::fresh(BulletNode * headBulletNode)
 
 void Bullet::initialization
 (
-	const Location b_,
-	const int r_,
-	const double angle_,
+	Location b_,
+	int r_,
+	double angle_,
 	void(*trail_)
 	(
 		const int time,								//时间
@@ -93,7 +96,7 @@ void Bullet::initialization
 		const double angle							//初始角度
 		),
 	int color_,
-	unsigned long startTime_
+	long startTime_
 )
 {
 	initialLocate = b_;
@@ -102,5 +105,5 @@ void Bullet::initialization
 	angle = angle_;
 	trail = trail_;
 	color = color_;
-	startTime = startTime_;
+	startTime = startTime_ > 0 ? startTime_ : 0;
 }

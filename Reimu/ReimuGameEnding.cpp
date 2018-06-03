@@ -16,7 +16,7 @@ void gameEnding(Self * self)
 	{
 		loadimage(&ending, _T(ENDING_BAD_ENDING));
 	}
-	putimage(0, 0, &ending);
+	putimage(SCREEN_WIDTH/2-ending.getwidth()/2, SCREEN_LENGTH/2-ending.getheight()/2, &ending);
 	//Ω· ¯ªÊÕº Õ∑≈ª∫≥Â
 	FlushBatchDraw();
 }

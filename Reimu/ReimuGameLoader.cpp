@@ -13,6 +13,6 @@ int gameLeader()
 	putimage(0, 0, &gameLoader);
 	//½áÊø»æÍ¼ÊÍ·Å»º³å
 	FlushBatchDraw();
-	Sleep(3000);
+	Sleep(1000);
 	return 0;
 }

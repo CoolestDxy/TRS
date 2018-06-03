@@ -18,9 +18,9 @@ const double Pi = 3.141529535;
 //安全矩形区
 const int SAFE_DISTANCE = 50;
 //高速速度
-const int HIGH_SPEED = 10;
+const int HIGH_SPEED = 15;
 //低速速度
-const int LOW_SPEED = 5;
+const int LOW_SPEED = 10;
 //弹幕基准除速率
 const int BULLET_BASE_SPEED = 10;
 //三角基准除量

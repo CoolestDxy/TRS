@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ReimuLeadinFromFile.cpp" />
     <ClCompile Include="ReimuBulletLink.cpp" />
     <ClCompile Include="ReimuBackGround.cpp" />
     <ClCompile Include="ReimuGameEnding.cpp" />
@@ -163,6 +164,9 @@
     <ClInclude Include="ReimuHeadFile.h" />
     <ClCompile Include="ReimuBullet.cpp" />
     <ClCompile Include="ReimuTime.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fileFramework.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
