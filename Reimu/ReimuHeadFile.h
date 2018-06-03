@@ -134,6 +134,11 @@ public:
 	void fresh(BulletNode * headBulletNode);
 };
 
+class BulVector :public Bullet
+{
+
+};
+
 //µ¯Ä»Á´ÏµÍ³
 class BulletNode
 {
